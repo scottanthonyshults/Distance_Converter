@@ -1,6 +1,21 @@
-const input = document.getElementById("input");
-const answer = document.getElementById("answer");
+const convert = document.querySelector('#convert'); // Get convert button
+const distance = document.querySelector('#input'); // Get input
+const answer = document.querySelector('#answer'); // Get answer paragraph
 
-answer.innerText = "2 Kilometers = 1.24 Miles";
 
-console.log(answer);
+
+
+
+// When convert is clicked
+convert.addEventListener('click', function () {
+  answer.innerHTML = `${distance.value} kilometers = ${(distance.value * .621371).toFixed(2)} Miles`;
+  distance.value = '';
+});
+
+
+
+
+
+
+
+
