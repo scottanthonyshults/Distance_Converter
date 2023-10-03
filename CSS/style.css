@@ -26,6 +26,11 @@ main {
   height: 110px;
 }
 
+/*
+#conversion {
+  font-size: 1.2rem;
+}
+*/
 main p,
 form {
   margin-top: 10px;
@@ -33,6 +38,10 @@ form {
 
 #container {
   text-align: center;
+}
+
+#option {
+  font-size: .6rem;
 }
 
 .footer {
