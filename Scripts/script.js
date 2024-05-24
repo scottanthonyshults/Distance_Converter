@@ -13,27 +13,34 @@ window.addEventListener("keypress", function (event) {
     choice = 'k';
     conversion.innerHTML = 'Miles to Kilometers';
     option.innerHTML = "press 'm' key to convert kilometers to miles";
-    answer.innerHTML = '1 Miles = 1.6 Kilometers'
+    answer.innerHTML = '1 Miles = 1.60934 Kilometers'
     input.setAttribute('placeholder', 'Distance in miles');
-  } else {
+  }
+  if (event.key === 'm') {
     choice = 'm';
     conversion.innerHTML = 'Kilometers to Miles';
     option.innerHTML = "press 'k' key to convert miles to kilometers";
-    answer.innerHTML = '1 Kilometers = 0.62 Miles';
+    answer.innerHTML = '1 Kilometers = 0.621371 Miles';
     input.setAttribute('placeholder', 'Distance in kilometers');
   }
 });
 // When convert is clicked
-if (choice === 'k') {
-  convert.addEventListener('click', function () {
-    console.log(choice);
-  })
-} else {
-  convert.addEventListener('click', function () {
-    console.log(choice);
-  })
-}
-
+convert.addEventListener('click', function () {
+  if (choice === 'k') {
+    //console.log(choice);
+    //console.log(Number(input.value) * 1.60934);
+    answer.innerHTML = `${Number(input.value)} miles = ${(Number(input.value) * 1.60934).toFixed(2)} kilometers`;
+    input.value = "";
+  }
+  if (choice === 'm') {
+    //convert.addEventListener('click', function () {
+    //console.log(choice);
+    //console.log(Number(input.value) * 0.621371);
+    answer.innerHTML = `${Number(input.value)} kilometers = ${(Number(input.value) * 0.621371).toFixed(2)} miles`;
+    input.value = "";
+    //})
+  }
+})
 
 
 
